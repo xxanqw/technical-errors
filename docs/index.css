@@ -14,3 +14,8 @@
 img{
     border: solid black 2px;
 }
+
+.blacknwhite {
+    background-color: black;
+    color: white;
+}
