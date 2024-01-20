@@ -14,16 +14,16 @@
     <div class="container mt-4">
         <h1>Технічні шоколадки</h1>
         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-            <li class="nav-item bg" role="presentation">
-              <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">20.01.24</button>
-            </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">21.01.24</button>
+              <button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="false">20.01.24</button>
+            </li>
+            <li class="nav-item bg" role="presentation">
+              <button class="nav-link  active" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="true">21.01.24</button>
             </li>
             </li>
           </ul>
           <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+            <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="1">
                 <p>Якщо коротко то сервер помер через MySQL, довелося його так скажемо знести і заново завести) <br>
                     Чесно я не знаю скільки часу на це потрібно, але я постараюся зробити все за день! <br> (20 січня 3:11)</p>
                     <img src="img/rip.png" alt="Creation of machina image">
@@ -37,22 +37,32 @@
                     <h3>Надія є!</h3>
                     <p>Вже вийшло взяти впску (хуйову дуже) для сайтів, вже її обустраюю, але поки що не буду оприлюднювати, а просто осідлаю🫣</p>
                     <p>Хоча основний сайт я оживлю, ачо нє</p>
+                    <h3>Йоу</h3>
+                    <p>кароч сервак для сайтів працює, але чомусь порти не хоче відкривати підар, загалом в другій менюшці вже буде ріл адекватна інфа!</p>
                 </div>
             </div>
-            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="1">
-                <div class="container-fluid">
-                    <p>Заготовочка на стан сервера</p>
+            <div class="tab-pane fade show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                    <p><b>Що ж...</b></p>
                     <div class="d-flex align-items-start">
                         <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                          <button class="nav-link" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="false" disabled>Сайти</button>
-                          <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false" disabled>Сервер</button>
+                          <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true" >Сайти</button>
+                          <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Сервер</button>
                         </div>
                         <div class="tab-content" id="v-pills-tabContent">
-                          <div class="tab-pane fade" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">...</div>
-                          <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">...</div>
+                          <div class="tab-pane fade active show" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
+                            <p>Стан сайтів на даний момент доволі нестабільний бо сервер підарас трішки і не дає мені адекватно відкрити порти <br>
+                            Але ми не розчаровуємося бо це так скажемо не смертельно, не раз з такої сітуейшн виходив
+                          </p>
+                          <p>Ось тут показано чи основний сайт працює (✅ - працює; ❎ - не працює)</p>
+                          <div class="isok">
+                            <p>Стан:</p>
+                            <p id="isok"></p>
+                          </div>
+                        </div>
+                          <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">Щодо сервера (для файлів і іншого) зараз досі немає місця в ораклі для впс, тому буду чекати по кд, поки деякі файли будуть лежати на сайтовом сервері, але швидкість там лайно💩</div>
                         </div>
                       </div>
-                </div>
+            </div>
             </div>
             <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">мяу</div>
         </div>
@@ -62,5 +72,6 @@
 
     <!-- BootStrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="js/sitechecker.js" crossorigin="anonymous"></script>
 </body>
 </html>
