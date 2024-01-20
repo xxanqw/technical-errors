@@ -1,4 +1,4 @@
-fetch('http://example.com/movies.json')
+fetch('http://xxanqw.pp.ua')
   .then(response => {
     if (!response.ok) {
       throw new Error('Network response was not ok');
