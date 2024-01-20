@@ -10,3 +10,7 @@
     align-items: center;
     text-align: center;
 }
+
+img{
+    border: solid black 2px;
+}
