@@ -10,6 +10,6 @@ fetch('https://xxanqw.pp.ua')
     document.getElementById('isok').innerHTML = '✅'; // Виведіть іконку успіху
   })
   .catch(error => {
-    console.error('There has been a problem with your fetch operation:', error);
+    console.log('There has been a problem with your fetch operation:', error);
     document.getElementById('isok').innerHTML = '❎'; // Виведіть іконку помилки
   });
