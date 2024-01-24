@@ -1,5 +1,5 @@
 ![Static Badge](https://img.shields.io/badge/server%20status-%20dead-red)
 
-![ryan](https://github.com/xxanqw/technical-errors/blob/14104d1854b0ca4c02248344f1d3ea78c24622cb/docs/ryan.png)
+![ryan](https://github.com/xxanqw/technical-errors/blob/c53e0051502fdc93c462ec435036f79c0d029866/docs/assets/img/android-chrome-192x192.png)
 ### Це просто хтмлька яка хоститься (постійно)
 І тут буде інфа про приколи з сервером і тд.
