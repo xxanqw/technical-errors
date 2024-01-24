@@ -1,5 +1,5 @@
 const site = "https://xxanqw.pp.ua";
-const server = "http://serveritself.xxanqw.pp.ua";
+const server = "http://serveritself.xserv.pp.ua";
 
 fetch(site)
   .then((response) => {
