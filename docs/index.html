@@ -1,78 +1,186 @@
 <!DOCTYPE html>
-<html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="ryan.png">
-    <link rel="stylesheet" href="index.css">
-    <title>Технічні шоколадки</title>
+<html data-bs-theme="light" lang="en">
 
-    <!-- BootStrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Технічні шоколадки</title>
+    <meta name="description" content="Проблеми з сервером, та статус">
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "Технічні шоколадки",
+            "url": "https://skill-issues.xserv.pp.ua/"
+        }
+    </script>
+    <script>
+        (function() {
+
+            // JavaScript snippet handling Dark/Light mode switching
+
+            const getStoredTheme = () => localStorage.getItem('theme');
+            const setStoredTheme = theme => localStorage.setItem('theme', theme);
+            const forcedTheme = document.documentElement.getAttribute('data-bss-forced-theme');
+
+            const getPreferredTheme = () => {
+
+                if (forcedTheme) return forcedTheme;
+
+                const storedTheme = getStoredTheme();
+                if (storedTheme) {
+                    return storedTheme;
+                }
+
+                const pageTheme = document.documentElement.getAttribute('data-bs-theme');
+
+                if (pageTheme) {
+                    return pageTheme;
+                }
+
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+
+            const setTheme = theme => {
+                if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.setAttribute('data-bs-theme', 'dark');
+                } else {
+                    document.documentElement.setAttribute('data-bs-theme', theme);
+                }
+            }
+
+            setTheme(getPreferredTheme());
+
+            const showActiveTheme = (theme, focus = false) => {
+                const themeSwitchers = [].slice.call(document.querySelectorAll('.theme-switcher'));
+
+                if (!themeSwitchers.length) return;
+
+                document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+                    element.classList.remove('active');
+                    element.setAttribute('aria-pressed', 'false');
+                });
+
+                for (const themeSwitcher of themeSwitchers) {
+
+                    const btnToActivate = themeSwitcher.querySelector('[data-bs-theme-value="' + theme + '"]');
+
+                    if (btnToActivate) {
+                        btnToActivate.classList.add('active');
+                        btnToActivate.setAttribute('aria-pressed', 'true');
+                    }
+                }
+            }
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+                const storedTheme = getStoredTheme();
+                if (storedTheme !== 'light' && storedTheme !== 'dark') {
+                    setTheme(getPreferredTheme());
+                }
+            });
+
+            window.addEventListener('DOMContentLoaded', () => {
+                showActiveTheme(getPreferredTheme());
+
+                document.querySelectorAll('[data-bs-theme-value]')
+                    .forEach(toggle => {
+                        toggle.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            const theme = toggle.getAttribute('data-bs-theme-value');
+                            setStoredTheme(theme);
+                            setTheme(theme);
+                            showActiveTheme(theme);
+                        })
+                    })
+            });
+        })();
+    </script>
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/android-chrome-512x512.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+
 <body>
-    <div class="container mt-4">
-        <h1>Технічні шоколадки</h1>
-        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="false">20.01.24</button>
-            </li>
-            <li class="nav-item bg" role="presentation">
-              <button class="nav-link  active" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="true">21.01.24</button>
-            </li>
-            </li>
-          </ul>
-          <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="1">
-                <p>Якщо коротко то сервер помер через MySQL, довелося його так скажемо знести і заново завести) <br>
-                    Чесно я не знаю скільки часу на це потрібно, але я постараюся зробити все за день! <br> (20 січня 3:11)</p>
-                    <img src="img/rip.png" alt="Creation of machina image">
-                    <p style="margin-top: 1px;">R.I.P. machina <br>
-                    20 січня 3:45 вона попрощалася з нами</p>
+    <div class="container text-center d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-center align-items-xl-center" style="margin-top: 16px;"><img src="assets/img/android-chrome-512x512.png" style="width: 52px;height: 52px;" width="100" height="100">
+        <h1 style="text-align: center;">Технічні шоколадки</h1>
+        <div class="text-center">
+            <ul class="nav nav-pills text-center d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-md-center align-items-md-center align-items-lg-center justify-content-xl-center align-items-xl-center" role="tablist">
+                <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-bs-toggle="pill" href="#tab-1">Опис проблеми</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-bs-toggle="pill" href="#tab-2">Загальна інформація</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-bs-toggle="pill" href="#tab-3">Стан</a></li>
+                <li class="theme-switcher dropup" style="margin-left: 5px;"><a aria-expanded="false" data-bs-toggle="dropdown" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill mb-1">
+                            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                        </svg></a>
+                    <div class="dropdown-menu"><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="light"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill opacity-50 me-2">
+                                <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                            </svg>Light</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="dark"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-moon-stars-fill opacity-50 me-2">
+                                <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278"></path>
+                                <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+                            </svg>Dark</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="auto"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-circle-half opacity-50 me-2">
+                                <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"></path>
+                            </svg>Auto</a></div>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade" role="tabpanel" id="tab-1">
+                    <p style="margin-top: 16px;">Якщо коротко то сервер помер через MySQL, довелося його так скажемо знести і заново завести)<br>Чесно я не знаю скільки часу на це потрібно, але я постараюся зробити все за день!<br>(20 січня 3:11)</p><img class="border rounded-0 border-2 border-black" src="assets/img/rip.png" width="231px" height="86px">
+                    <p>R.I.P. machina<br>20 січня 3:45 вона попрощалася з нами</p>
                     <p>Невеличке (насправді величке) фіаско, немає місця для створення сервера, тому поки що сидимо мертві🥲</p>
-                    <p style="margin-bottom: 4px;">Провтикав я до 7ранку, всеодно немає місця.. Ждьом... (я спать) <br>
-                    І да все шо треба я бекапнув</p>
-                    <img src="img/backup.png" alt="Backup Image">
-                    <p>Якщо треба скачати бекап сервака з майна ось <a href="https://1drv.ms/u/s!Arn8pu_E1h36hJZ2dL_YmOXYP10KfA?e=zDELAv">ссилка</a></p>
+                    <p>Провтикав я до 7ранку, всеодно немає місця.. Ждьом... (я спать)<br>І да все шо треба я бекапнув</p><img class="border rounded-0 border-2 border-black" src="assets/img/backup.png" style="padding-top: 0px;margin-top: -13px;" width="304px" height="160px">
+                    <p>Якщо треба скачати бекап сервака з майна ось&nbsp;<a href="https://1drv.ms/u/s!Arn8pu_E1h36hJZ2dL_YmOXYP10KfA?e=zDELAv"><span style="color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));">ссилка</span></a></p>
                     <h3>Надія є!</h3>
-                    <p>Вже вийшло взяти впску (хуйову дуже) для сайтів, вже її обустраюю, але поки що не буду оприлюднювати, а просто осідлаю🫣</p>
-                    <p>Хоча основний сайт я оживлю, ачо нє</p>
-                    <h3>Йоу</h3>
+                    <p>Вже вийшло взяти впску (хуйову дуже) для сайтів, вже її обустраюю, але поки що не буду оприлюднювати, а просто осідлаю🫣<br>Хоча основний сайт я оживлю, ачо нє</p>
+                    <h3>Йоу!</h3>
                     <p>кароч сервак для сайтів працює, але чомусь порти не хоче відкривати підар, загалом в другій менюшці вже буде ріл адекватна інфа!</p>
                 </div>
+                <div class="tab-pane fade show active" role="tabpanel" id="tab-2">
+                    <h3 style="margin-top: 16px;">Сайти</h3>
+                    <p>Стан сайтів на даний момент доволі нестабільний бо сервер підарас трішки і не дає мені адекватно відкрити порти<br>Але ми не розчаровуємося бо це так скажемо не смертельно, не раз з такої сітуейшн виходив</p>
+                    <p>Доки ситуація точно не покращиться, я перевезу абсолютно всі сайти на гітхаб, оскільки тепер володію Proшкою!</p>
+                    <h3>Сервери</h3>
+                    <p>Щодо сервера (для файлів і іншого) зараз досі немає місця в ораклі для впс, тому буду чекати по кд, поки деякі файли будуть лежати на сайтовом сервері, але швидкість там лайно💩</p>
+                    <p>Години життя були просрані на ці сервери галімі, але так нічого й немає, я досі буду провіряти.. Бо може бог є і він дасть мені сил на це😃</p>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="tab-3">
+                    <h3 style="margin-top: 16px;">Стан серверів</h3>
+                    <p>Тут буде відображення стан як серверів, так і сайтів, все показується в лайві, тобто стан актуальний постійно</p>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Сервер/Сайт</th>
+                                    <th>Його стан</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="https://xxanqw.pp.ua" target="_blank">xxanqw.pp.ua</a></td>
+                                    <td id="site">❎</td>
+                                </tr>
+                                <tr>
+                                    <td>Server</td>
+                                    <td id="server">❎</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-            <div class="tab-pane fade show active container" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
-                    <p><b>Що ж...</b></p>
-                    <div class="d-flex align-items-start">
-                        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                          <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true" >Сайти</button>
-                          <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Сервер</button>
-                        </div>
-                        <div class="tab-content" id="v-pills-tabContent">
-                          <div class="tab-pane fade active show" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
-                            <p>Стан сайтів на даний момент доволі нестабільний бо сервер підарас трішки і не дає мені адекватно відкрити порти <br>
-                            Але ми не розчаровуємося бо це так скажемо не смертельно, не раз з такої сітуейшн виходив
-                          </p>
-                          <p>Ось тут показано чи основний сайт працює (✅ - працює; ❎ - не працює)</p>
-                          <div class="isok">
-                            <p>Стан:</p>
-                            <p id="isok"></p>
-                          </div>
-                          <p>Зараз стан галочка бо сайт на гітхабі (тимчасово)</p>
-                        </div>
-                          <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">Щодо сервера (для файлів і іншого) зараз досі немає місця в ораклі для впс, тому буду чекати по кд, поки деякі файли будуть лежати на сайтовом сервері, але швидкість там лайно💩</div>
-                        </div>
-                      </div>
-            </div>
-            </div>
-            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">мяу</div>
         </div>
-    <div class="container">
-        <p>Ця сторінка на <a href="https://github.com/xxanqw/technical-errors" target="_blank">гітхабі</a></p>
     </div>
-
-    <!-- BootStrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="js/sitechecker.js" crossorigin="anonymous"></script>
+    <footer>
+        <p class="fs-6 text-center justify-content-xl-center align-items-xl-center">Ця сторінка на <a href="https://github.com/xxanqw/technical-errors" target="_blank">гітхабі</a><br>©2024 xxanqw</p>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/checker.js"></script>
 </body>
+
 </html>
