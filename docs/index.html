@@ -105,16 +105,17 @@
     <link rel="icon" type="image/png" sizes="512x512" href="assets/img/android-chrome-512x512.png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
-    <div class="container text-center d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-center align-items-xl-center" style="margin-top: 16px;"><img src="assets/img/android-chrome-512x512.png" style="width: 52px;height: 52px;" width="100" height="100">
-        <h1 style="text-align: center;">Технічні шоколадки</h1>
+    <div class="container text-center d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-center align-items-xl-center" style="margin-top: 16px;"><img class="tada animated" src="assets/img/android-chrome-512x512.png" style="width: 52px;height: 52px;" width="100" height="100">
+        <h1 class="tada animated" style="text-align: center;">Технічні шоколадки</h1>
         <div class="text-center">
             <ul class="nav nav-pills text-center d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-md-center align-items-md-center align-items-lg-center justify-content-xl-center align-items-xl-center" role="tablist">
-                <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-bs-toggle="pill" href="#tab-1">Опис проблеми</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-bs-toggle="pill" href="#tab-2">Загальна інформація</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-bs-toggle="pill" href="#tab-1">Опис проблеми</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-bs-toggle="pill" href="#tab-2">Загальна інформація</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-bs-toggle="pill" href="#tab-3">Стан</a></li>
                 <li class="theme-switcher dropup" style="margin-left: 5px;"><a aria-expanded="false" data-bs-toggle="dropdown" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill mb-1">
                             <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
@@ -130,18 +131,17 @@
                 </li>
             </ul>
             <div class="tab-content">
-                <div class="tab-pane fade" role="tabpanel" id="tab-1">
+                <div class="tab-pane fade show active" role="tabpanel" id="tab-1">
                     <p style="margin-top: 16px;">Якщо коротко то сервер помер через MySQL, довелося його так скажемо знести і заново завести)<br>Чесно я не знаю скільки часу на це потрібно, але я постараюся зробити все за день!<br>(20 січня 3:11)</p><img class="border rounded-0 border-2 border-black" src="assets/img/rip.png" width="231px" height="86px">
                     <p>R.I.P. machina<br>20 січня 3:45 вона попрощалася з нами</p>
                     <p>Невеличке (насправді величке) фіаско, немає місця для створення сервера, тому поки що сидимо мертві🥲</p>
                     <p>Провтикав я до 7ранку, всеодно немає місця.. Ждьом... (я спать)<br>І да все шо треба я бекапнув</p><img class="border rounded-0 border-2 border-black" src="assets/img/backup.png" style="padding-top: 0px;margin-top: -13px;" width="304px" height="160px">
-                    <p>Якщо треба скачати бекап сервака з майна ось&nbsp;<a href="https://1drv.ms/u/s!Arn8pu_E1h36hJZ2dL_YmOXYP10KfA?e=zDELAv"><span style="color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));">ссилка</span></a></p>
-                    <h3>Надія є!</h3>
+                    <h3 style="margin-top: 16px;">Надія є!</h3>
                     <p>Вже вийшло взяти впску (хуйову дуже) для сайтів, вже її обустраюю, але поки що не буду оприлюднювати, а просто осідлаю🫣<br>Хоча основний сайт я оживлю, ачо нє</p>
                     <h3>Йоу!</h3>
                     <p>кароч сервак для сайтів працює, але чомусь порти не хоче відкривати підар, загалом в другій менюшці вже буде ріл адекватна інфа!</p>
                 </div>
-                <div class="tab-pane fade show active" role="tabpanel" id="tab-2">
+                <div class="tab-pane fade" role="tabpanel" id="tab-2">
                     <h3 style="margin-top: 16px;">Сайти</h3>
                     <p>Стан сайтів на даний момент доволі нестабільний бо сервер підарас трішки і не дає мені адекватно відкрити порти<br>Але ми не розчаровуємося бо це так скажемо не смертельно, не раз з такої сітуейшн виходив</p>
                     <p>Доки ситуація точно не покращиться, я перевезу абсолютно всі сайти на гітхаб, оскільки тепер володію Proшкою!</p>
@@ -166,8 +166,16 @@
                                     <td id="site">❎</td>
                                 </tr>
                                 <tr>
-                                    <td>Server</td>
+                                    <td>Server (xserv.pp.ua)</td>
                                     <td id="server">❎</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://karpatimoped.pp.ua" target="_blank">karpatimoped.pp.ua</a></td>
+                                    <td id="karpati">❎</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://hudoliy.v.ua" target="_blank">hudoliy.v.ua</a></td>
+                                    <td id="hudoliy">❎</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -180,6 +188,7 @@
         <p class="fs-6 text-center justify-content-xl-center align-items-xl-center">Ця сторінка на <a href="https://github.com/xxanqw/technical-errors" target="_blank">гітхабі</a><br>©2024 xxanqw</p>
     </footer>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/checker.js"></script>
 </body>
 
