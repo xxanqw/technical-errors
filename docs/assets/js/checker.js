@@ -2,7 +2,7 @@ const site = "https://xxanqw.pp.ua";
 const server = "https://serveritself.xserv.pp.ua";
 const karpati = "https://karpatimoped.pp.ua";
 const hudoliy = "https://hudoliy.v.ua";
-const serverweb = "https://webserveritself.xxanqw.pp.ua"
+const serverweb = "https://webserveritself.xxanqw.pp.ua";
 
 fetch(site)
   .then((response) => {
@@ -11,7 +11,7 @@ fetch(site)
       document.getElementById("site").innerHTML = "✅";
       document.getElementById("site-more").innerHTML = "Response status: " + response.status;
     } else {
-      console.log("Сторінка недоступна");
+      console.log("Сторінка недоступна " + site);
       document.getElementById("site").innerHTML = "❎";
     }
   })
@@ -28,7 +28,7 @@ fetch(site)
       document.getElementById("server").innerHTML = "✅";
       document.getElementById("server-more").innerHTML = "Response status: " + response.status;
     } else {
-      console.log("Сторінка недоступна");
+      console.log("Сторінка недоступна " + server);
       document.getElementById("server").innerHTML = "❎";
     }
   })
@@ -45,7 +45,7 @@ fetch(site)
       document.getElementById("karpati").innerHTML = "✅";
       document.getElementById("karpati-more").innerHTML = "Response status: " + response.status;
     } else {
-      console.log("Сторінка недоступна");
+      console.log("Сторінка недоступна " + karpati);
       document.getElementById("karpati").innerHTML = "❎";
     }
   })
@@ -62,7 +62,7 @@ fetch(site)
       document.getElementById("hudoliy").innerHTML = "✅";
       document.getElementById("hudoliy-more").innerHTML = "Response status: " + response.status;
     } else {
-      console.log("Сторінка недоступна");
+      console.log("Сторінка недоступна " + hudoliy);
       document.getElementById("hudoliy").innerHTML = "❎";
     }
   })
@@ -79,7 +79,7 @@ fetch(site)
       document.getElementById("serverweb").innerHTML = "✅";
       document.getElementById("serverweb-more").innerHTML = "Response status: " + response.status;
     } else {
-      console.log("Сторінка недоступна");
+      console.log("Сторінка недоступна " + serverweb);
       document.getElementById("serverweb").innerHTML = "❎";
     }
   })
