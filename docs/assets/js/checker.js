@@ -84,7 +84,7 @@ fetch(site)
     }
   })
   .catch((error) => {
-    console.log("Помилка:", error, hudoliy);
+    console.log("Помилка:", error, serverweb);
     document.getElementById("serverweb-more").innerHTML = "Помилка: " + error;
     document.getElementById("serverweb").innerHTML = "❎";
   });
