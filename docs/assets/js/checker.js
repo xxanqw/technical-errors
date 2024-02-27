@@ -9,7 +9,7 @@ fetch(site)
     if (response.status === 200) {
       //console.log("Сторінка доступна");
       document.getElementById("site").innerHTML = "✅";
-      document.getElementById("site-more").innerHTML = "Response status: " + response.status;
+      document.getElementById("site-more").innerHTML = "✅" + response.status;
     } else {
       console.log("Сторінка недоступна " + site);
       document.getElementById("site").innerHTML = "❎";
@@ -17,7 +17,7 @@ fetch(site)
   })
   .catch((error) => {
     console.log("Помилка:", error, site);
-    document.getElementById("site-more").innerHTML = "Помилка: " + error;
+    document.getElementById("site-more").innerHTML = "❎" + error;
   });
     document.getElementById("site").innerHTML = "❎";
 
@@ -26,7 +26,7 @@ fetch(site)
     if (response.status === 200) {
       //console.log("Сторінка доступна");
       document.getElementById("server").innerHTML = "✅";
-      document.getElementById("server-more").innerHTML = "Response status: " + response.status;
+      document.getElementById("server-more").innerHTML = "✅" + response.status;
     } else {
       console.log("Сторінка недоступна " + server);
       document.getElementById("server").innerHTML = "❎";
@@ -34,7 +34,7 @@ fetch(site)
   })
   .catch((error) => {
     console.log("Помилка:", error, server);
-    document.getElementById("server-more").innerHTML = "Помилка: " + error;
+    document.getElementById("server-more").innerHTML = "❎" + error;
     document.getElementById("server").innerHTML = "❎";
   });
 
@@ -43,7 +43,7 @@ fetch(site)
     if (response.status === 200) {
       //console.log("Сторінка доступна");
       document.getElementById("karpati").innerHTML = "✅";
-      document.getElementById("karpati-more").innerHTML = "Response status: " + response.status;
+      document.getElementById("karpati-more").innerHTML = "✅" + response.status;
     } else {
       console.log("Сторінка недоступна " + karpati);
       document.getElementById("karpati").innerHTML = "❎";
@@ -51,7 +51,7 @@ fetch(site)
   })
   .catch((error) => {
     console.log("Помилка:", error, karpati);
-    document.getElementById("karpati-more").innerHTML = "Помилка: " + error;
+    document.getElementById("karpati-more").innerHTML = "❎" + error;
     document.getElementById("karpati").innerHTML = "❎";
   });
 
@@ -60,7 +60,7 @@ fetch(site)
     if (response.status === 200) {
       //console.log("Сторінка доступна");
       document.getElementById("hudoliy").innerHTML = "✅";
-      document.getElementById("hudoliy-more").innerHTML = "Response status: " + response.status;
+      document.getElementById("hudoliy-more").innerHTML = "✅" + response.status;
     } else {
       console.log("Сторінка недоступна " + hudoliy);
       document.getElementById("hudoliy").innerHTML = "❎";
@@ -68,7 +68,7 @@ fetch(site)
   })
   .catch((error) => {
     console.log("Помилка:", error, hudoliy);
-    document.getElementById("hudoliy-more").innerHTML = "Помилка: " + error;
+    document.getElementById("hudoliy-more").innerHTML = "❎" + error;
     document.getElementById("hudoliy").innerHTML = "❎";
   });
 
@@ -77,7 +77,7 @@ fetch(site)
     if (response.status === 200) {
       //console.log("Сторінка доступна");
       document.getElementById("serverweb").innerHTML = "✅";
-      document.getElementById("serverweb-more").innerHTML = "Response status: " + response.status;
+      document.getElementById("serverweb-more").innerHTML = "✅" + response.status;
     } else {
       console.log("Сторінка недоступна " + serverweb);
       document.getElementById("serverweb").innerHTML = "❎";
@@ -85,6 +85,6 @@ fetch(site)
   })
   .catch((error) => {
     console.log("Помилка:", error, serverweb);
-    document.getElementById("serverweb-more").innerHTML = "Помилка: " + error;
+    document.getElementById("serverweb-more").innerHTML = "❎" + error;
     document.getElementById("serverweb").innerHTML = "❎";
   });

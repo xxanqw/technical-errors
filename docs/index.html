@@ -1,19 +1,10 @@
 <!DOCTYPE html>
-<html data-bs-theme="light" lang="en">
+<html data-bs-theme="auto" lang="uk">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Технічні шоколадки</title>
-    <meta name="description" content="Проблеми з сервером, та статус">
-    <script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@type": "WebSite",
-            "name": "Технічні шоколадки",
-            "url": "https://skill-issues.xserv.pp.ua/"
-        }
-    </script>
     <script>
         (function() {
 
@@ -104,134 +95,107 @@
     <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="assets/img/android-chrome-512x512.png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap">
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body>
-    <div class="container text-center d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-center align-items-xl-center" style="margin-top: 16px;margin-bottom: 16px;"><img class="tada animated" src="assets/img/android-chrome-512x512.png" style="width: 52px;height: 52px;" width="100" height="100">
-        <h1 class="tada animated" style="text-align: center;">Технічні шоколадки</h1>
-        <div class="text-center">
-            <ul class="nav nav-pills text-center d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-md-center align-items-md-center align-items-lg-center justify-content-xl-center align-items-xl-center" role="tablist">
-                <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-bs-toggle="pill" href="#tab-1">Опис проблеми</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-bs-toggle="pill" href="#tab-2">Загальна інформація</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-bs-toggle="pill" href="#tab-3">Стан</a></li>
-                <li class="theme-switcher dropup" style="margin-left: 5px;"><a aria-expanded="false" data-bs-toggle="dropdown" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill mb-1">
-                            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
-                        </svg></a>
-                    <div class="dropdown-menu"><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="light"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill opacity-50 me-2">
-                                <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
-                            </svg>Light</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="dark"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-moon-stars-fill opacity-50 me-2">
-                                <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278"></path>
-                                <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
-                            </svg>Dark</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="auto"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-circle-half opacity-50 me-2">
-                                <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"></path>
-                            </svg>Auto</a></div>
-                </li>
+<body style="font-family: Roboto, sans-serif;">
+    <div class="container d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex flex-column justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-md-center align-items-md-center justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-center" style="margin-top: 20px;"><img class="tada animated" src="assets/img/android-chrome-512x512.png" width="52" height="52">
+        <h1 class="fw-bold d-flex d-sm-flex d-md-flex d-lg-flex align-items-start align-items-sm-start align-items-md-start align-items-lg-start tada animated">Технічні шоколадки<span class="badge rounded-pill bg-success" id="whatsnew" style="font-size: 10px;margin-left: -5px;"><span style="font-weight: normal !important; color: rgb(255, 255, 255);">ver. 2</span></span></h1>
+        <div class="text-center d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex flex-column align-items-center flex-sm-column align-items-sm-center flex-md-column align-items-md-center flex-lg-column align-items-lg-center flex-xl-column justify-content-xl-center align-items-xl-center flex-xxl-column" style="margin-top: 30px;">
+            <ul class="nav nav-pills" role="tablist">
+                <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-bs-toggle="pill" href="#tab-1">Стан</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-bs-toggle="pill" href="#tab-2">Розширена інформація</a></li>
             </ul>
-            <div class="tab-content">
-                <div class="tab-pane fade" role="tabpanel" id="tab-1">
-                    <p style="margin-top: 16px;">Якщо коротко то сервер помер через MySQL, довелося його так скажемо знести і заново завести)<br>Чесно я не знаю скільки часу на це потрібно, але я постараюся зробити все за день!<br>(20 січня 3:11)</p><img class="border rounded-0 border-2 border-black" src="assets/img/rip.png" width="231px" height="86px">
-                    <p>R.I.P. machina<br>20 січня 3:45 вона попрощалася з нами</p>
-                    <p>Невеличке (насправді величке) фіаско, немає місця для створення сервера, тому поки що сидимо мертві🥲</p>
-                    <p>Провтикав я до 7ранку, всеодно немає місця.. Ждьом... (я спать)<br>І да все шо треба я бекапнув</p><img class="border rounded-0 border-2 border-black" src="assets/img/backup.png" style="padding-top: 0px;margin-top: -13px;" width="304px" height="160px">
-                    <h3 style="margin-top: 16px;">Надія є!</h3>
-                    <p>Вже вийшло взяти впску (хуйову дуже) для сайтів, вже її обустраюю, але поки що не буду оприлюднювати, а просто осідлаю🫣<br>Хоча основний сайт я оживлю, ачо нє</p>
-                    <h3>Йоу!</h3>
-                    <p>кароч сервак для сайтів працює, але чомусь порти не хоче відкривати підар, загалом в другій менюшці вже буде ріл адекватна інфа!</p>
-                </div>
-                <div class="tab-pane fade show active" role="tabpanel" id="tab-2">
-                    <h3 style="margin-top: 16px;">Сайти</h3>
-                    <p>Стан сайтів на даний момент доволі нестабільний бо сервер підарас трішки і не дає мені адекватно відкрити порти<br>Але ми не розчаровуємося бо це так скажемо не смертельно, не раз з такої сітуейшн виходив</p>
-                    <p>Наразі сервер для веб сторінок є! І він працює, за декілька днів всі сайти будуть на ньому!</p>
-                    <h3>Сервери</h3>
-                    <p>Щодо сервера (для файлів і іншого) зараз досі немає місця в ораклі для впс, тому буду чекати по кд, поки деякі файли будуть лежати на сайтовом сервері, але швидкість там лайно💩</p>
-                    <p>Години життя були просрані на ці сервери галімі, але так нічого й немає, я досі буду провіряти.. Бо може бог є і він дасть мені сил на це😃</p>
-                </div>
-                <div class="tab-pane fade" role="tabpanel" id="tab-3">
-                    <h3 style="margin-top: 16px;">Стан серверів</h3>
-                    <p>Тут буде відображення стан як серверів, так і сайтів, все показується в лайві, тобто стан актуальний постійно</p>
+            <div class="tab-content" style="margin: 10px;">
+                <div class="tab-pane fade show active" role="tabpanel" id="tab-1">
+                    <h2>Стан серверів</h2>
+                    <p>Тут буде відображення стану як серверів, так і сайтів, все показується в лайві, тобто стан актуальний постійно</p>
                     <div class="table-responsive">
                         <table class="table table-hover table-bordered">
+                            <caption><span style="color: rgb(33, 37, 41);">✅ - доступний та працює</span><br><span style="color: rgb(33, 37, 41);">❎ - недоступний та не працює</span><br><span style="color: rgb(33, 37, 41);">🔄 - отримання даних</span></caption>
                             <thead>
                                 <tr>
-                                    <th>Сервер/Сайт</th>
+                                    <th><strong>Сервер/Сайт</strong></th>
                                     <th>Його стан</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><a href="https://xxanqw.pp.ua" target="_blank">xxanqw.pp.ua</a></td>
-                                    <td id="site">🔄</td>
+                                    <td><a href="https://xxanqw.pp.ua/" target="_blank"><span style="color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));">xxanqw.pp.ua</span></a></td>
+                                    <td id="site">🔃</td>
                                 </tr>
+                                <tr>
+                                    <td><a href="https://karpatimoped.pp.ua/" target="_blank"><span style="color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));">karpatimoped.pp.ua</span></a></td>
+                                    <td id="karpati">🔃</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://hudoliy.v.ua/" target="_blank"><span style="color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));">hudoliy.v.ua</span></a></td>
+                                    <td id="hudoliy">🔃</td>
+                                </tr>
+                                <tr></tr>
                                 <tr>
                                     <td>Server (xserv.pp.ua)</td>
-                                    <td id="server">🔄</td>
-                                </tr>
-                                <tr>
-                                    <td><a href="https://karpatimoped.pp.ua" target="_blank">karpatimoped.pp.ua</a></td>
-                                    <td id="karpati">🔄</td>
-                                </tr>
-                                <tr>
-                                    <td><a href="https://hudoliy.v.ua" target="_blank">hudoliy.v.ua</a></td>
-                                    <td id="hudoliy">🔄</td>
+                                    <td id="server">🔃</td>
                                 </tr>
                                 <tr>
                                     <td>Server (web)</td>
-                                    <td id="serverweb">🔄</td>
+                                    <td id="serverweb">🔃</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <p class="text-start">✅ - доступний та працює<br>❎ - недоступний та не працює<br>🔄 - отримання даних</p>
-                    <div><a class="btn btn-info" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse-1" href="#collapse-1" role="button" style="margin-top: 16px;">Більше інформації</a>
-                        <div class="collapse" id="collapse-1">
-                            <div class="table-responsive" style="margin-top: 16px;">
-                                <table class="table table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th>Сервер/Сайт</th>
-                                            <th>Розширений стан</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>xxanqw.pp.ua</td>
-                                            <td id="site-more">Завантаження..</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Server (xserv.pp.ua)</td>
-                                            <td id="server-more">Завантаження..</td>
-                                        </tr>
-                                        <tr>
-                                            <td>karpatimoped.pp.ua</td>
-                                            <td id="karpati-more">Завантаження..</td>
-                                        </tr>
-                                        <tr>
-                                            <td>hudoliy.v.ua</td>
-                                            <td id="hudoliy-more">Завантаження..</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Server (web)</td>
-                                            <td id="serverweb-more">Завантаження..</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <p class="text-start">Трішки пояснення<br><strong>Response status: 200 </strong>- позначає що сервер відповів коректно та працює<br>Все інше - нічо не працює бо тупо неможливо отримати відповідь✌🏻</p>
-                        </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="tab-2">
+                    <h2>Розширена інформація</h2>
+                    <p>Тут буде відображення розширеного стану як серверів, так і сайтів, все показується в лайві, тобто стан актуальний постійно</p>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-bordered">
+                            <caption><span style="color: rgb(33, 37, 41);">Трішки пояснення</span><br><strong><span style="color: rgb(33, 37, 41);">✅200&nbsp;</span></strong><span style="color: rgb(33, 37, 41);">- позначає що сервер відповів коректно та працює</span><br><span style="color: rgb(33, 37, 41);">Будь який вид ❎</span><strong><span style="color: rgb(33, 37, 41);">Type Error</span></strong><span style="color: rgb(33, 37, 41);"> - нічо не працює бо тупо неможливо отримати відповідь✌🏻</span></caption>
+                            <thead>
+                                <tr>
+                                    <th>Сервер/Сайт</th>
+                                    <th>Розширений стан</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>xxanqw.pp.ua</td>
+                                    <td id="site-more">🔃Завантаження..</td>
+                                </tr>
+                                <tr>
+                                    <td>karpatimoped.pp.ua</td>
+                                    <td id="karpati-more">🔃Завантаження..</td>
+                                </tr>
+                                <tr>
+                                    <td>hudoliy.v.ua</td>
+                                    <td id="hudoliy-more">🔃Завантаження..</td>
+                                </tr>
+                                <tr>
+                                    <td>Server (xserv.pp.ua)</td>
+                                    <td id="server-more">🔃Завантаження..</td>
+                                </tr>
+                                <tr>
+                                    <td>Server (web)</td>
+                                    <td id="serverweb">🔃Завантаження..</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <footer>
-        <p class="fs-6 text-center justify-content-xl-center align-items-xl-center">Ця сторінка на <a href="https://github.com/xxanqw/technical-errors" target="_blank">гітхабі</a><br>©2024 xxanqw</p>
+        <div class="container">
+            <p class="text-center">©️2024 xxanqw</p>
+        </div>
     </footer>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/checker.js"></script>
+    <script src="assets/js/clicks.js"></script>
 </body>
 
 </html>

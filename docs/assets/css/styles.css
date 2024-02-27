@@ -2,3 +2,7 @@
   display: none;
 }
 
+#whatsnew {
+  cursor: pointer;
+}
+
