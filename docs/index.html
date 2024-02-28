@@ -5,6 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Технічні шоколадки</title>
+    <link rel="canonical" href="https://skill-issues.xserv.pp.ua/">
+    <meta property="og:url" content="https://skill-issues.xserv.pp.ua/">
+    <meta name="twitter:title" content="Технічні шоколадки">
+    <meta name="twitter:image" content="https://skill-issues.xserv.pp.ua/assets/img/android-chrome-512x512.png">
+    <meta property="og:image" content="https://skill-issues.xserv.pp.ua/assets/img/android-chrome-512x512.png">
+    <meta name="description" content="Статус моїх сайтів та серверів.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="Статус моїх сайтів та серверів.">
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "Технічні шоколадки",
+            "url": "https://skill-issues.xserv.pp.ua"
+        }
+    </script>
     <script>
         (function() {
 
@@ -95,6 +112,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="assets/img/android-chrome-512x512.png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap">
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -105,80 +123,79 @@
         <h1 class="fw-bold d-flex d-sm-flex d-md-flex d-lg-flex align-items-start align-items-sm-start align-items-md-start align-items-lg-start tada animated">Технічні шоколадки<span class="badge rounded-pill bg-success" id="whatsnew" style="font-size: 10px;margin-left: -5px;"><span style="font-weight: normal !important; color: rgb(255, 255, 255);">ver. 2</span></span></h1>
         <div class="text-center d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex flex-column align-items-center flex-sm-column align-items-sm-center flex-md-column align-items-md-center flex-lg-column align-items-lg-center flex-xl-column justify-content-xl-center align-items-xl-center flex-xxl-column" style="margin-top: 30px;">
             <ul class="nav nav-pills" role="tablist">
-                <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-bs-toggle="pill" href="#tab-1">Стан</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-bs-toggle="pill" href="#tab-2">Розширена інформація</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-bs-toggle="pill" href="#status">Стан</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-bs-toggle="pill" href="#more">Розширена інформація</a></li>
             </ul>
             <div class="tab-content" style="margin: 10px;">
-                <div class="tab-pane fade show active" role="tabpanel" id="tab-1">
+                <div class="tab-pane fade show active" role="tabpanel" id="status">
                     <h2>Стан серверів</h2>
                     <p>Тут буде відображення стану як серверів, так і сайтів, все показується в лайві, тобто стан актуальний постійно</p>
                     <div class="table-responsive">
                         <table class="table table-hover table-bordered">
-                            <caption><span style="color: rgb(33, 37, 41);">✅ - доступний та працює</span><br><span style="color: rgb(33, 37, 41);">❎ - недоступний та не працює</span><br><span style="color: rgb(33, 37, 41);">🔄 - отримання даних</span></caption>
+                            <caption>🔄 - Отримання даних від серверу<br>❎ - Не вдалося отримати відповідь від серверу, тому виникає помилка<br>✅ - Коректна відповідь серверу!</caption>
                             <thead>
                                 <tr>
-                                    <th><strong>Сервер/Сайт</strong></th>
-                                    <th>Його стан</th>
+                                    <th>Сервер/Сайт</th>
+                                    <th>Його стан (Доступність)</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><a href="https://xxanqw.pp.ua/" target="_blank"><span style="color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));">xxanqw.pp.ua</span></a></td>
-                                    <td id="site">🔃</td>
+                                    <td><a href="https://xxanqw.pp.ua" target="_blank">xxanqw.pp.ua</a></td>
+                                    <td id="site">🔄 Завантаження..</td>
                                 </tr>
                                 <tr>
-                                    <td><a href="https://karpatimoped.pp.ua/" target="_blank"><span style="color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));">karpatimoped.pp.ua</span></a></td>
-                                    <td id="karpati">🔃</td>
+                                    <td><a href="https://karpatimoped.pp.ua" target="_blank">karpatimoped.pp.ua</a></td>
+                                    <td id="karpati">🔄 Завантаження..</td>
                                 </tr>
                                 <tr>
-                                    <td><a href="https://hudoliy.v.ua/" target="_blank"><span style="color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));">hudoliy.v.ua</span></a></td>
-                                    <td id="hudoliy">🔃</td>
-                                </tr>
-                                <tr></tr>
-                                <tr>
-                                    <td>Server (xserv.pp.ua)</td>
-                                    <td id="server">🔃</td>
+                                    <td><a href="https://hudoliy.v.ua" target="_blank">hudoliy.v.ua</a></td>
+                                    <td id="hudoliy">🔄 Завантаження..</td>
                                 </tr>
                                 <tr>
                                     <td>Server (web)</td>
-                                    <td id="serverweb">🔃</td>
+                                    <td id="serverweb">🔄 Завантаження..</td>
+                                </tr>
+                                <tr>
+                                    <td>Server (xserv.pp.ua)</td>
+                                    <td id="server">🔄 Завантаження..</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
-                <div class="tab-pane fade" role="tabpanel" id="tab-2">
+                <div class="tab-pane fade" role="tabpanel" id="more">
                     <h2>Розширена інформація</h2>
                     <p>Тут буде відображення розширеного стану як серверів, так і сайтів, все показується в лайві, тобто стан актуальний постійно</p>
                     <div class="table-responsive">
                         <table class="table table-hover table-bordered">
-                            <caption><span style="color: rgb(33, 37, 41);">Трішки пояснення</span><br><strong><span style="color: rgb(33, 37, 41);">✅200&nbsp;</span></strong><span style="color: rgb(33, 37, 41);">- позначає що сервер відповів коректно та працює</span><br><span style="color: rgb(33, 37, 41);">Будь який вид ❎</span><strong><span style="color: rgb(33, 37, 41);">Type Error</span></strong><span style="color: rgb(33, 37, 41);"> - нічо не працює бо тупо неможливо отримати відповідь✌🏻</span></caption>
+                            <caption><strong>✅ 200</strong> - та сама коректна відповідь!<br>Будь який&nbsp;<strong>❎&nbsp;TypeError</strong> - означає що сервера не існує і отримати відповідь неможливо.<br><strong>❎ Сервер існує, але не дає відповіді</strong> - означає що скоріше за все фаєрвол блокує з'єднання.</caption>
                             <thead>
                                 <tr>
-                                    <th>Сервер/Сайт</th>
+                                    <th>Назва/Сервер</th>
                                     <th>Розширений стан</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>xxanqw.pp.ua</td>
-                                    <td id="site-more">🔃Завантаження..</td>
+                                    <td id="site-more">🔄 Завантаження..</td>
                                 </tr>
                                 <tr>
                                     <td>karpatimoped.pp.ua</td>
-                                    <td id="karpati-more">🔃Завантаження..</td>
+                                    <td id="karpati-more">🔄 Завантаження..</td>
                                 </tr>
                                 <tr>
                                     <td>hudoliy.v.ua</td>
-                                    <td id="hudoliy-more">🔃Завантаження..</td>
-                                </tr>
-                                <tr>
-                                    <td>Server (xserv.pp.ua)</td>
-                                    <td id="server-more">🔃Завантаження..</td>
+                                    <td id="hudoliy-more">🔄 Завантаження..</td>
                                 </tr>
                                 <tr>
                                     <td>Server (web)</td>
-                                    <td id="serverweb">🔃Завантаження..</td>
+                                    <td id="serverweb-more">🔄 Завантаження..</td>
+                                </tr>
+                                <tr>
+                                    <td>Server (xserv.pp.ua)</td>
+                                    <td id="server-more">🔄 Завантаження..</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -187,11 +204,6 @@
             </div>
         </div>
     </div>
-    <footer>
-        <div class="container">
-            <p class="text-center">©️2024 xxanqw</p>
-        </div>
-    </footer>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/checker.js"></script>
